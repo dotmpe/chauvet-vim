@@ -14,19 +14,19 @@ let colors_name = "chauvet"
 
 " Vim >= 7.0 specific colors
 if version >= 700
-hi CursorLine                                          ctermbg=232                cterm=NONE    term=NONE
-hi CursorColumn                                        ctermbg=232                cterm=NONE    term=NONE
-hi CursorLineNr                                        ctermfg=220                cterm=BOLD    term=BOLD
-hi MatchParen             guibg=NONE                                ctermbg=NONE  cterm=REVERSE term=REVERSE
-hi Pmenu                                               ctermbg=242
-hi PmenuSel                                            ctermfg=0    ctermbg=185
+  hi CursorLine                                          ctermbg=232                cterm=NONE    term=NONE
+  hi CursorColumn                                        ctermbg=232                cterm=NONE    term=NONE
+  hi CursorLineNr                                        ctermfg=220                cterm=BOLD    term=BOLD
+  hi MatchParen             guibg=NONE                                ctermbg=NONE  cterm=REVERSE term=REVERSE
+  hi Pmenu                                               ctermbg=242
+  hi PmenuSel                                            ctermfg=0    ctermbg=185
 endif
 
 " General colors
 hi Cursor                                                           ctermbg=241
-hi Normal                                              ctermfg=253  ctermbg=233
-hi NonText                                             ctermfg=242  ctermbg=237
-hi LineNr                                              ctermfg=239  ctermbg=232     cterm=NONE    term=NONE
+hi Normal                                              ctermfg=253  ctermbg=234
+hi NonText                                             ctermfg=241  ctermbg=235
+hi LineNr                                              ctermfg=239  ctermbg=232   cterm=NONE    term=NONE
 hi StatusLine                                          ctermfg=237  ctermbg=232
 hi StatusLineNC                                        ctermfg=237  ctermbg=232
 hi VertSplit                                           ctermfg=232  ctermbg=232
@@ -35,8 +35,8 @@ hi Folded                                              ctermfg=236  ctermbg=220
 hi Visual                                              ctermfg=186  ctermbg=238
 "hi SpecialKey
 hi ColorColumn                                                      ctermbg=166
-hi ColorColumn                                                      ctermbg=234
-hi SignColumn                                                       ctermbg=232
+hi ColorColumn                                                      ctermbg=236
+hi SignColumn                                                       ctermbg=230
 
 " Syntax highlighting
 hi Comment                                             ctermfg=244   " Grey
