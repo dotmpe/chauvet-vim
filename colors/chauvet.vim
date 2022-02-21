@@ -19,8 +19,8 @@ if version >= 700
   hi CursorColumn                                        ctermbg=232                cterm=NONE    term=NONE
   hi CursorLineNr                                        ctermfg=220                cterm=BOLD    term=BOLD
   hi MatchParen             guibg=NONE                                ctermbg=NONE  cterm=REVERSE term=REVERSE
-  hi Pmenu                                               ctermbg=242
-  hi PmenuSel                                            ctermfg=0    ctermbg=185
+  hi Pmenu                                               ctermfg=232  ctermbg=242
+  hi PmenuSel                                            ctermfg=232  ctermbg=220
 endif
 
 " General colors
