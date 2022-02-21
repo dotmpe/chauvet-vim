@@ -1,4 +1,4 @@
-# Cauvet
+# Chauvet
 
 An mostly amber-yellow colorscheme for Vim.
 
