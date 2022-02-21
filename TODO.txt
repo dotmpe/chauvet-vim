@@ -1,0 +1,3 @@
+(B) 2022-02-20 TODO: replace syntastic with ALE and fix signs
+(C) 2022-02-20 TODO: fix nice airline status and tmux theme as well
+# ex:ft=todo.txt:
