@@ -1,9 +1,11 @@
 " This is a coy of powerlineish, with colors adjusted to Chauvet Vim theme
 
 " Normal mode                                    " fg - bg
-let s:N1 = [ '#121212' , '#ff8700' , 233 , 208 ] " grey - orange
-let s:N2 = [ '#9e9e9e' , '#303030' , 247 , 236 ] " gray8 - gray2
-let s:N3 = [ '#ffffff' , '#121212' , 252 , 233 ] " white - gray4
+let s:N1 = [ '#121212' , '#ff8700' , 232 , 208 ] " grey - orange
+let s:N2 = [ '#9e9e9e' , '#303030' , 247 , 234 ] " gray8 - gray2
+let s:N3 = [ '#ffffff' , '#121212' , 252 , 232 ] " white - gray4
+
+" XXX: is there an inactive/active mode?
 
 " Insert mode
 let s:I1 = [ '#005f5f' , '#ffffff' , 233 , 105 ] " grey - purple blue
