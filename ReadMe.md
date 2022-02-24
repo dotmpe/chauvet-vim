@@ -6,7 +6,7 @@ To install use this URL with your package manager (see [Install](#Installation))
   https://github.com/dotmpe/chauvet-vim.git
 ```
 
-![Vim Terminal Screenshot with Chauvet](screenshot.png)
+![Vim Terminal Screenshot with Chauvet](https://user-images.githubusercontent.com/310639/155468051-f17d2775-e6b9-47ef-b8f5-7bb662098f7f.png)
 *Showing off insert mode, Airline, Tabline, vim-help, NERDTree and a new buffer*
 
 In its current reincarnation, Chauvet is a dark-background theme with bright orange, moss-green and electric purple/blue.
@@ -110,7 +110,7 @@ if "$VIM_AIRLINE_THEME" != "" | let g:airline_theme = $VIM_AIRLINE_THEME | endif
   Only vim-pandoc is still doing its own thing.
   
 2022-02-20
-: Looking at [Mustang](screenshot-mustang-airline.png) today and looked for 
+: Looking at [Mustang](https://user-images.githubusercontent.com/310639/155468054-1bc8bb32-99ce-4c01-87d3-2fd48e85dc61.png) today and looked for 
   variants.
 
   Found Vitamins by same author but seems focussed on GUI.
