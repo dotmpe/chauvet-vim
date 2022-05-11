@@ -1,6 +1,6 @@
 " Maintainer:   Berend van Berkum (dev+chauvet+theme@dotmpe.com)
-" Version:      0.0.1
-" Last Change:  Februari 19 2022
+" Version:      0.0.1-dev
+" Last Change:  April 9 2022
 
 set background=dark
 
@@ -63,15 +63,28 @@ hi IncSearch                                           ctermfg=208  ctermbg=234 
 
 "" Vim-spell colors
 
-" Use maroon as red, a bit more dim than regular full red.
-hi SpellBad cterm=REVERSE term=REVERSE ctermfg=1 ctermbg=251
+" In stead of reversed text that looks a lot like a diff, this uses just regular
+" text color to highlight spelling issues. But still a bit darker background to
+" make the spans stand out more than regular syntax.
+
+" Normally bright but not very saturated red background.
+hi SpellBad cterm=underline term=NONE ctermul=9 ctermbg=232
 
 " Turn of capitalization suggestion since it doesn't work right for me
-" (just too dumb). TODO: move to own config.
-hi clear SpellCap
+" (just too simplistic). XXX: move to sep config files?
+"hi clear SpellCap
+" Use a pale yellow.
+"hi SpellCap cterm=NONE term=NONE ctermfg=186 ctermbg=232
+hi SpellCap cterm=underline term=NONE ctermul=186 ctermbg=232
 
-"hi clear SpellLocal
-"hi clear SpellRare
+" Normally a bright but not very saturated light blue, and not very readable
+" with light text. Use another light blue.
+"hi clear SpellLocal 
+hi SpellLocal cterm=underline term=NONE ctermul=111 ctermbg=232
+
+" Normally purplish, use this scheme's purplish (LightSlateBlue)
+hi SpellRare cterm=NONE term=NONE ctermfg=105 ctermbg=232
+
 
 " XXX: what is guiisp?
 
@@ -155,6 +168,7 @@ hi def link RubyClass Statement
 " FIXME: I wish more syntaxes would use Keyword a bit more. Why is that?
 " I prefer to think of if, while etc as statements.
 " But class, def or return? Ie. c doesnt use Keyword class at all.
+" XXX: Ruby is also a bit low...
 
 
 " Id: Chauvet-vim/0.0.1-dev chauvet.vim
