@@ -35,7 +35,7 @@ hi Folded                                              ctermfg=236  ctermbg=220
 hi FoldColumn                                          ctermfg=220  ctermbg=234
 hi Title                                               ctermfg=208
 hi Visual                                              ctermfg=186  ctermbg=238
-hi ColorColumn                                                      ctermbg=166
+hi ColorColumn                                                      ctermbg=166 " [DarkOrange3b]
 hi ColorColumn                                                      ctermbg=236
 hi SignColumn                                                       ctermbg=230
 
@@ -44,18 +44,18 @@ hi clear Underlined
 hi Underlined gui=UNDERLINE cterm=UNDERLINE term=UNDERLINE
 
 " Syntax highlighting
-hi Comment                                             ctermfg=244   " Grey50
+hi Comment                                             ctermfg=244   " [Grey50]
 hi Todo                                                ctermfg=208  ctermbg=NONE  cterm=REVERSE term=REVERSE " Orange reverse
-hi Constant                                            ctermfg=105   " LightSlateBlue
-hi String                                              ctermfg=106   " Green (Yellow4)
-hi Identifier                                          ctermfg=208   " DarkOrange
-hi Function                                            ctermfg=185   " Khaki3
+hi Constant                                            ctermfg=105   " [LightSlateBlue]
+hi String                                              ctermfg=106   " [Yellow4] Green
+hi Identifier                                          ctermfg=208   " [DarkOrange]
+hi Function                                            ctermfg=185   " [Khaki3]
 hi Type                                                ctermfg=105
-hi Statement                                           ctermfg=130   " Brown 1: dark brown for common repeating programming statements
-hi Keyword                                             ctermfg=103   " Aubergine grey: mute but different for certain keywords
-hi PreProc                                             ctermfg=186   " Pale yellowish
-hi Number                                              ctermfg=111   " Light blue
-hi Special                                             ctermfg=172   " Brown 2: light brown for delimiters etc.
+hi Statement                                           ctermfg=130   " [DarkOrange3a] Brown 1: dark brown for common repeating programming statements
+hi Keyword                                             ctermfg=103   " [LightSlateGrey] Aubergine grey: mute but different for certain keywords
+hi PreProc                                             ctermfg=186   " [LightGoldenrod2] Pale yellowish
+hi Number                                              ctermfg=111   " [SkyBlue2] Light blue
+hi Special                                             ctermfg=172   " [Orange3] Brown 2: light brown for delimiters etc.
 "hi SpecialKey
 hi Search                                              ctermfg=220  ctermbg=234   cterm=REVERSE term=REVERSE " Bright yellow
 hi IncSearch                                           ctermfg=208  ctermbg=234   cterm=REVERSE term=REVERSE " Orange
