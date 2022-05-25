@@ -8,12 +8,7 @@ endif
 
 hi clear
 
-"if !strlen($CS)
-"  let $CS="dark"
-"endif
-
-"set background=dark
-
+" Let Vim know we have a colorscheme loaded
 let colors_name = "chauvet"
 
 " TODO: wanto disable some backgrounds to enjoy semi-transparent terminal. 
@@ -23,38 +18,67 @@ if !strlen($BG)
   let $BG="1"
 endif
 
-" Vim >= 7.0 specific colors
-if version >= 700
-  hi CursorLine                                          ctermbg=232                cterm=NONE    term=NONE
-  hi CursorColumn                                        ctermbg=232                cterm=NONE    term=NONE
-  hi CursorLineNr                                        ctermfg=220  ctermbg=232   cterm=BOLD    term=BOLD
-  hi MatchParen             guibg=NONE                   ctermfg=105  ctermbg=NONE cterm=REVERSE term=REVERSE
-  hi Pmenu                                               ctermfg=232  ctermbg=242
-  hi Pmenu                                               ctermfg=242  ctermbg=232
-  hi PmenuSel                                            ctermfg=232  ctermbg=220
-endif
+if &background ==# 'light'
+  " TODO: fix for light backgrounds. Doing some testing.
+  if version >= 700
+    hi CursorLineNr                                        ctermfg=220  ctermbg=255   cterm=BOLD    term=BOLD
+  endif
 
-" General colors
-"hi Cursor                                                           ctermbg=235
-if $BG == "1"
-  hi Normal                                              ctermfg=251  ctermbg=233
-  hi LineNr                                              ctermfg=239  ctermbg=232   cterm=NONE    term=NONE
-  hi NonText                                             ctermfg=241  ctermbg=235
+  if $BG == "1"
+    hi Normal                                              ctermfg=251  ctermbg=254
+    hi LineNr                                              ctermfg=248  ctermbg=255   cterm=NONE    term=NONE
+    hi NonText                                             ctermfg=246  ctermbg=252
+  else
+    hi Normal                                              ctermfg=251  ctermbg=NONE
+    hi LineNr                                              ctermfg=248  ctermbg=NONE  cterm=NONE    term=NONE
+    hi NonText                                             ctermfg=241  ctermbg=NONE
+  endif
+
+  hi StatusLine                                          ctermfg=240  ctermbg=255
+  hi StatusLineNC                                        ctermfg=250  ctermbg=255
+  hi Folded                                              ctermfg=249  ctermbg=220
+  hi FoldColumn                                          ctermfg=220  ctermbg=253
+
+  hi Function                                            ctermfg=58
+  hi PreProc                                             ctermfg=139
+
 else
-  hi Normal                                              ctermfg=251  ctermbg=NONE
-  hi LineNr                                              ctermfg=239  ctermbg=NONE  cterm=NONE    term=NONE
-  hi NonText                                             ctermfg=241  ctermbg=NONE
+  " Vim >= 7.0 specific colors
+  if version >= 700
+    hi CursorLine                                          ctermbg=232                cterm=NONE    term=NONE
+    hi CursorColumn                                        ctermbg=232                cterm=NONE    term=NONE
+    hi CursorLineNr                                        ctermfg=220  ctermbg=232   cterm=BOLD    term=BOLD
+    hi MatchParen             guibg=NONE                   ctermfg=105  ctermbg=NONE cterm=REVERSE term=REVERSE
+    hi Pmenu                                               ctermfg=232  ctermbg=242
+    hi Pmenu                                               ctermfg=242  ctermbg=232
+    hi PmenuSel                                            ctermfg=232  ctermbg=220
+  endif
+
+  " General colors
+  "hi Cursor                                                           ctermbg=235
+  if $BG == "1"
+    hi Normal                                              ctermfg=251  ctermbg=233
+    hi LineNr                                              ctermfg=239  ctermbg=232   cterm=NONE    term=NONE
+    hi NonText                                             ctermfg=241  ctermbg=235
+  else
+    hi Normal                                              ctermfg=251  ctermbg=NONE
+    hi LineNr                                              ctermfg=239  ctermbg=NONE  cterm=NONE    term=NONE
+    hi NonText                                             ctermfg=241  ctermbg=NONE
+  endif
+  hi StatusLine                                          ctermfg=240  ctermbg=232
+  hi StatusLineNC                                        ctermfg=237  ctermbg=232
+  hi VertSplit                                           ctermfg=232  ctermbg=232
+  hi Folded                                              ctermfg=236  ctermbg=220
+  hi FoldColumn                                          ctermfg=220  ctermbg=234
+  hi Title                                               ctermfg=208
+  hi Visual                                              ctermfg=186  ctermbg=238
+  hi ColorColumn                                                      ctermbg=166 " [DarkOrange3b]
+  hi ColorColumn                                                      ctermbg=236
+  hi SignColumn                                                       ctermbg=230
+
+  hi Function                                            ctermfg=185   " [Khaki3]
+  hi PreProc                                             ctermfg=186   " [LightGoldenrod2] Pale yellowish
 endif
-hi StatusLine                                          ctermfg=240  ctermbg=232
-hi StatusLineNC                                        ctermfg=237  ctermbg=232
-hi VertSplit                                           ctermfg=232  ctermbg=232
-hi Folded                                              ctermfg=236  ctermbg=220
-hi FoldColumn                                          ctermfg=220  ctermbg=234
-hi Title                                               ctermfg=208
-hi Visual                                              ctermfg=186  ctermbg=238
-hi ColorColumn                                                      ctermbg=166 " [DarkOrange3b]
-hi ColorColumn                                                      ctermbg=236
-hi SignColumn                                                       ctermbg=230
 
 " Clear Underlined class of colors?
 hi clear Underlined
@@ -66,11 +90,11 @@ hi Todo                                                ctermfg=208  ctermbg=NONE
 hi Constant                                            ctermfg=105   " [LightSlateBlue]
 hi String                                              ctermfg=106   " [Yellow4] Green
 hi Identifier                                          ctermfg=208   " [DarkOrange]
-hi Function                                            ctermfg=185   " [Khaki3]
+"hi Function                                            ctermfg=185   " [Khaki3]
 hi Type                                                ctermfg=105
 hi Statement                                           ctermfg=130   " [DarkOrange3a] Brown 1: dark brown for common repeating programming statements
 hi Keyword                                             ctermfg=103   " [LightSlateGrey] Aubergine grey: mute but different for certain keywords
-hi PreProc                                             ctermfg=186   " [LightGoldenrod2] Pale yellowish
+"hi PreProc                                             ctermfg=186   " [LightGoldenrod2] Pale yellowish
 hi Number                                              ctermfg=111   " [SkyBlue2] Light blue
 hi Special                                             ctermfg=172   " [Orange3] Brown 2: light brown for delimiters etc.
 "hi SpecialKey
