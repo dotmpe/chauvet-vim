@@ -2,15 +2,26 @@
 " Version:      0.0.1-dev
 " Last Change:  April 9 2022
 
-set background=dark
-
-hi clear
-
 if exists("syntax_on")
   syntax reset
 endif
 
+hi clear
+
+"if !strlen($CS)
+"  let $CS="dark"
+"endif
+
+"set background=dark
+
 let colors_name = "chauvet"
+
+" TODO: wanto disable some backgrounds to enjoy semi-transparent terminal. 
+"
+" XXX: normal, statusbar, cursor, cursorline/col and colorcol configurations?
+if !strlen($BG)
+  let $BG="1"
+endif
 
 " Vim >= 7.0 specific colors
 if version >= 700
@@ -25,9 +36,15 @@ endif
 
 " General colors
 "hi Cursor                                                           ctermbg=235
-hi Normal                                              ctermfg=251  ctermbg=233
-hi NonText                                             ctermfg=241  ctermbg=235
-hi LineNr                                              ctermfg=239  ctermbg=232   cterm=NONE    term=NONE
+if $BG == "1"
+  hi Normal                                              ctermfg=251  ctermbg=233
+  hi LineNr                                              ctermfg=239  ctermbg=232   cterm=NONE    term=NONE
+  hi NonText                                             ctermfg=241  ctermbg=235
+else
+  hi Normal                                              ctermfg=251  ctermbg=NONE
+  hi LineNr                                              ctermfg=239  ctermbg=NONE  cterm=NONE    term=NONE
+  hi NonText                                             ctermfg=241  ctermbg=NONE
+endif
 hi StatusLine                                          ctermfg=240  ctermbg=232
 hi StatusLineNC                                        ctermfg=237  ctermbg=232
 hi VertSplit                                           ctermfg=232  ctermbg=232
