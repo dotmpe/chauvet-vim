@@ -71,7 +71,10 @@ else
   hi Folded                                              ctermfg=236  ctermbg=220
   hi FoldColumn                                          ctermfg=220  ctermbg=234
   hi Title                                               ctermfg=208
-  hi Visual                                              ctermfg=186  ctermbg=238
+
+  hi Visual                                              ctermfg=186  ctermbg=22
+  hi VisualNOS                                           ctermfg=186  ctermbg=22
+
   hi ColorColumn                                                      ctermbg=166 " [DarkOrange3b]
   hi ColorColumn                                                      ctermbg=236
   hi SignColumn                                                       ctermbg=230
