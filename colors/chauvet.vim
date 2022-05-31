@@ -25,19 +25,24 @@ if &background ==# 'light'
   endif
 
   if $BG == "1"
-    hi Normal                                              ctermfg=251  ctermbg=254
+    hi Normal                                              ctermfg=236  ctermbg=254
     hi LineNr                                              ctermfg=248  ctermbg=255   cterm=NONE    term=NONE
-    hi NonText                                             ctermfg=246  ctermbg=252
+    hi NonText                                             ctermfg=236  ctermbg=252
   else
-    hi Normal                                              ctermfg=251  ctermbg=NONE
+    hi Normal                                              ctermfg=236  ctermbg=NONE
     hi LineNr                                              ctermfg=248  ctermbg=NONE  cterm=NONE    term=NONE
-    hi NonText                                             ctermfg=241  ctermbg=NONE
+    hi NonText                                             ctermfg=236  ctermbg=NONE
   endif
 
-  hi StatusLine                                          ctermfg=240  ctermbg=255
+  hi StatusLine                                          ctermfg=237  ctermbg=255
   hi StatusLineNC                                        ctermfg=250  ctermbg=255
   hi Folded                                              ctermfg=249  ctermbg=220
   hi FoldColumn                                          ctermfg=220  ctermbg=253
+
+  hi Visual                                              ctermfg=186  ctermbg=22
+  hi VisualNOS                                           ctermfg=186  ctermbg=22
+
+  hi SignColumn                                                       ctermbg=247
 
   hi Function                                            ctermfg=58
   hi PreProc                                             ctermfg=139
@@ -65,6 +70,7 @@ else
     hi LineNr                                              ctermfg=239  ctermbg=NONE  cterm=NONE    term=NONE
     hi NonText                                             ctermfg=241  ctermbg=NONE
   endif
+
   hi StatusLine                                          ctermfg=240  ctermbg=232
   hi StatusLineNC                                        ctermfg=237  ctermbg=232
   hi VertSplit                                           ctermfg=232  ctermbg=232
@@ -166,9 +172,15 @@ hi def link NERDTreeUp                Comment
 
 "" GitGutter colors
 
-hi GitGutterAdd    ctermfg=106 ctermbg=232
-hi GitGutterChange ctermfg=208 ctermbg=232
-hi GitGutterDelete ctermfg=1 ctermbg=232
+if &background ==# 'light'
+  hi GitGutterAdd    ctermfg=106 ctermbg=255
+  hi GitGutterChange ctermfg=208 ctermbg=255
+  hi GitGutterDelete ctermfg=1 ctermbg=255
+else
+  hi GitGutterAdd    ctermfg=106 ctermbg=232
+  hi GitGutterChange ctermfg=208 ctermbg=232
+  hi GitGutterDelete ctermfg=1 ctermbg=232
+endif
 
 
 "" Tabline colors
