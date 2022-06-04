@@ -117,24 +117,47 @@ hi IncSearch                                           ctermfg=208  ctermbg=234 
 " text color to highlight spelling issues. But still a bit darker background to
 " make the spans stand out more than regular syntax.
 
-" Normally bright but not very saturated red background.
-hi SpellBad cterm=underline term=NONE ctermul=9 ctermbg=232
+if &background ==# 'light'
 
-" Turn of capitalization suggestion since it doesn't work right for me
-" (just too simplistic). XXX: move to sep config files?
-"hi clear SpellCap
-" Use a pale yellow.
-"hi SpellCap cterm=NONE term=NONE ctermfg=186 ctermbg=232
-hi SpellCap cterm=underline term=NONE ctermul=186 ctermbg=232
+  " Normally bright but not very saturated red background.
+  hi SpellBad cterm=underline term=NONE ctermul=9 ctermbg=255
+  
+  " Turn of capitalization suggestion since it doesn't work right for me
+  " (just too simplistic). XXX: move to sep config files?
+  "hi clear SpellCap
+  " Use a pale yellow.
+  "hi SpellCap cterm=NONE term=NONE ctermfg=186 ctermbg=255
+  hi SpellCap cterm=underline term=NONE ctermul=186 ctermbg=255
+  
+  " Normally a bright but not very saturated light blue, and not very readable
+  " with light text. Use another light blue.
+  "hi clear SpellLocal 
+  hi SpellLocal cterm=underline term=NONE ctermul=111 ctermbg=255
+  
+  " Normally purplish, use this scheme's purplish (LightSlateBlue)
+  hi SpellRare cterm=NONE term=NONE ctermfg=105 ctermbg=255
 
-" Normally a bright but not very saturated light blue, and not very readable
-" with light text. Use another light blue.
-"hi clear SpellLocal 
-hi SpellLocal cterm=underline term=NONE ctermul=111 ctermbg=232
+else
 
-" Normally purplish, use this scheme's purplish (LightSlateBlue)
-hi SpellRare cterm=NONE term=NONE ctermfg=105 ctermbg=232
+  " Normally bright but not very saturated red background.
+  hi SpellBad cterm=underline term=NONE ctermul=9 ctermbg=232
+  
+  " Turn of capitalization suggestion since it doesn't work right for me
+  " (just too simplistic). XXX: move to sep config files?
+  "hi clear SpellCap
+  " Use a pale yellow.
+  "hi SpellCap cterm=NONE term=NONE ctermfg=186 ctermbg=232
+  hi SpellCap cterm=underline term=NONE ctermul=186 ctermbg=232
+  
+  " Normally a bright but not very saturated light blue, and not very readable
+  " with light text. Use another light blue.
+  "hi clear SpellLocal 
+  hi SpellLocal cterm=underline term=NONE ctermul=111 ctermbg=232
+  
+  " Normally purplish, use this scheme's purplish (LightSlateBlue)
+  hi SpellRare cterm=NONE term=NONE ctermfg=105 ctermbg=232
 
+endif
 
 " XXX: what is guiisp?
 
