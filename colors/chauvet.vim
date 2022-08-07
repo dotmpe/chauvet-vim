@@ -53,7 +53,12 @@ else
     hi CursorLine                                          ctermbg=232                cterm=NONE    term=NONE
     hi CursorColumn                                        ctermbg=232                cterm=NONE    term=NONE
     hi CursorLineNr                                        ctermfg=220  ctermbg=232   cterm=BOLD    term=BOLD
-    hi MatchParen             guibg=NONE                   ctermfg=105  ctermbg=NONE cterm=REVERSE term=REVERSE
+
+    " Purple bg for counter-paren
+    "hi MatchParen             guibg=NONE                   ctermfg=232  ctermbg=105   cterm=NONE    term=NONE
+    " Bright yellow bg for counter-paren
+    hi MatchParen             guibg=NONE                   ctermfg=232  ctermbg=220   cterm=NONE    term=NONE
+
     hi Pmenu                                               ctermfg=232  ctermbg=242
     hi Pmenu                                               ctermfg=242  ctermbg=232
     hi PmenuSel                                            ctermfg=232  ctermbg=220
