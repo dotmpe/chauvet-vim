@@ -43,3 +43,7 @@ endif
 
 if "$VIM_AIRLINE_THEME" != "" | let g:airline_theme = $VIM_AIRLINE_THEME | endif
 ```
+
+## Status
+
+Maintained. See [Chauvet main project](https://github.com/dotmpe/chauvet) for on-going development.
