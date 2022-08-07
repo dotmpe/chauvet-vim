@@ -92,7 +92,9 @@ else
 
   hi Function                                            ctermfg=185   " [Khaki3]
   hi PreProc                                             ctermfg=186   " [LightGoldenrod2] Pale yellowish
+
 endif
+
 
 " Clear Underlined class of colors?
 hi clear Underlined
@@ -106,14 +108,17 @@ hi String                                              ctermfg=106   " [Yellow4]
 hi Identifier                                          ctermfg=208   " [DarkOrange]
 "hi Function                                            ctermfg=185   " [Khaki3]
 hi Type                                                ctermfg=105
-hi Statement                                           ctermfg=130   " [DarkOrange3a] Brown 1: dark brown for common repeating programming statements
 hi Keyword                                             ctermfg=103   " [LightSlateGrey] Aubergine grey: mute but different for certain keywords
 "hi PreProc                                             ctermfg=186   " [LightGoldenrod2] Pale yellowish
 hi Number                                              ctermfg=111   " [SkyBlue2] Light blue
-hi Special                                             ctermfg=172   " [Orange3] Brown 2: light brown for delimiters etc.
+hi Statement                                           ctermfg=172   " [Orange3] Brown 2: light brown for delimiters etc.
+hi Special                                             ctermfg=130   " [DarkOrange3a] Brown 1: dark brown for common repeating programming statements
 "hi SpecialKey
 hi Search                                              ctermfg=220  ctermbg=234   cterm=REVERSE term=REVERSE " Bright yellow
 hi IncSearch                                           ctermfg=208  ctermbg=234   cterm=REVERSE term=REVERSE " Orange
+
+" Extra
+hi Warning                                             ctermfg=202
 
 
 "" Vim-spell colors
