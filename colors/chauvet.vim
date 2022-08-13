@@ -21,7 +21,7 @@ endif
 if &background ==# 'light'
   " TODO: fix for light backgrounds. Doing some testing.
   if version >= 700
-    hi CursorLineNr                                        ctermfg=220  ctermbg=255   cterm=BOLD    term=BOLD
+    hi CursorLineNr                                        ctermfg=220  ctermbg=250   cterm=BOLD    term=BOLD
   endif
 
   if $BG == "1"
