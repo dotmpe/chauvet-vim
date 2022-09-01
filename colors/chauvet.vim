@@ -47,6 +47,7 @@ if &background ==# 'light'
   hi Function                                            ctermfg=58
   hi PreProc                                             ctermfg=139
 
+  hi String                                              ctermfg=28
 else
   " Vim >= 7.0 specific colors
   if version >= 700
@@ -93,6 +94,7 @@ else
   hi Function                                            ctermfg=185   " [Khaki3]
   hi PreProc                                             ctermfg=186   " [LightGoldenrod2] Pale yellowish
 
+  hi String                                              ctermfg=106   " [Yellow4] Green
 endif
 
 
@@ -104,7 +106,6 @@ hi Underlined gui=UNDERLINE cterm=UNDERLINE term=UNDERLINE
 hi Comment                                             ctermfg=244   " [Grey50]
 hi Todo                                                ctermfg=208  ctermbg=NONE  cterm=REVERSE term=REVERSE " Orange reverse
 hi Constant                                            ctermfg=105   " [LightSlateBlue]
-hi String                                              ctermfg=106   " [Yellow4] Green
 hi Identifier                                          ctermfg=208   " [DarkOrange]
 "hi Function                                            ctermfg=185   " [Khaki3]
 hi Type                                                ctermfg=105
