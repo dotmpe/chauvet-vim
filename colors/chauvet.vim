@@ -79,7 +79,7 @@ else
 
   hi StatusLine                                          ctermfg=240  ctermbg=232
   hi StatusLineNC                                        ctermfg=237  ctermbg=232
-  hi VertSplit                                           ctermfg=232  ctermbg=232
+  hi VertSplit                                           ctermfg=234  ctermbg=234  cterm=NONE term=NONE gui=NONE
   hi Folded                                              ctermfg=236  ctermbg=220
   hi FoldColumn                                          ctermfg=220  ctermbg=234
   hi Title                                               ctermfg=208
